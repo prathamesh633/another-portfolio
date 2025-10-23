@@ -68,24 +68,28 @@ const projects = [
     description: "Java-based web application designed for managing student records. Allows users to perform core operations such as viewing, adding, editing, and deleting student information. The application was built using Java, Servlets, and JSP, with Apache Tomcat serving as the web server. Containerized using Docker for easy deployment and execution.",
     tags: ["EKS", "ArgoCD", "Terraform"],
     github: "https://github.com/prathamesh633",
+    demo: "https://demo.student-app.example.com",
   },
   {
     title: "Python Flask Web App",
     description: "A Python Flask web application with a modern UI, containerized using Docker for streamlined deployment. Created a reproducible environment by containerizing the application, ensuring consistent execution across different setups. The project includes a health check endpoint for monitoring and is designed for easy deployment.",
     tags: ["Python", "Lambda", "S3"],
     github: "https://github.com/prathamesh633",
+    demo: "https://demo.flask-app.example.com",
   },
   {
     title: "Reddit Clone on Kubernetes",
     description: "This is a full-stack Reddit clone deployed on Kubernetes, demonstrating practical DevOps skills. The application was built and containerized using Docker, then orchestrated on a Kubernetes cluster. Key aspects include setting up CI/CD pipelines for automated deployments, managing cluster resources, and ensuring application availability and scalability.",
     tags: ["Go", "ECS", "CloudWatch"],
     github: "https://github.com/prathamesh633",
+    demo: "https://demo.reddit-clone.example.com",
   },
   {
     title: "Django Notes App",
     description: "A simple notes application built with React and Django, containerized for deployment. Focused on setting up a robust development and deployment pipeline. This included containerizing the application using Docker and configuring Nginx as a reverse proxy for efficient serving.",
     tags: ["Kubebuilder", "Velero", "Golang"],
     github: "https://github.com/prathamesh633",
+    demo: "https://demo.django-notes.example.com",
   },
 ];
 

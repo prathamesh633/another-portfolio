@@ -53,7 +53,7 @@ const Navigation = () => {
           </div>
 
           <ul className="hidden md:flex items-center gap-8">
-            {["about", "skills", "projects", "journey", "education", "contact"].map((item) => (
+            {["about", "skills", "education", "projects", "journey", "contact"].map((item) => (
               <li key={item}>
                 <button
                   onClick={() => scrollToSection(item)}
