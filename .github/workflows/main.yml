@@ -3,15 +3,15 @@ name: Deploy Portfolio to GitHub Pages
 on:
   push:
     branches:
-      - master  # deploy whenever main branch is updated
+      - master  # Deploy when master branch is updated
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout code
-      - name: Checkout repository
+      # 1️⃣ Checkout the repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
       # 2️⃣ Setup Node.js
@@ -19,17 +19,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
+          cache: 'npm'  # Cache node_modules for faster builds
 
       # 3️⃣ Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # Clean install using package-lock.json
 
       # 4️⃣ Build the project
       - name: Build
-        run: npx vite build
+        run: npx vite build  # Use local vite binary
 
       # 5️⃣ Deploy to GitHub Pages
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
